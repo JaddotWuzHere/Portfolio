@@ -18,11 +18,11 @@ export default function Home() {
       </section>
 
       <section>
-        <h3>Currently building</h3>
+        <h3>Currently Building</h3>
         <ul>
-          <li>Locrian (music practice app)</li>
-          <li>Realistic water physics (Minecraft)</li>
-          <li>The Continuum (long term speculative physics project)</li>
+          <li>Locrian</li>
+          <li>Realistic water physics Minecraft mod</li>
+          <li>The Continuum</li>
         </ul>
       </section>
 

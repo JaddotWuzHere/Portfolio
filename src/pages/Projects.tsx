@@ -160,7 +160,7 @@ export default function Projects() {
               GitHub repo
             </a>{" "}
             ·{" "}
-            <a href="../portfolio/src/assets/raytracer.pdf" target="_blank" rel="noreferrer">
+            <a href="https://jaddotwuzhere.github.io/portfolio/raytracer.pdf" target="_blank" rel="noreferrer">
               Project writeup
             </a>
           </p>

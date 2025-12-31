@@ -1,6 +1,6 @@
 export default function Music() {
   return (
-    <div>
+    <div className="page">
       <section>
         <h1>Music</h1>
 
@@ -93,7 +93,7 @@ export default function Music() {
       <section>
         <h2>Awards and Honors</h2>
 
-        <dl>
+        <dl className="music-awards">
           <dt>Young Artist Scholarship Competition — High School Piano Division • 1st Place</dt>
           <dd>Thursday Musical</dd>
 

@@ -6,7 +6,7 @@ import hydraxia from "../assets/hydraxia.png";
 
 export default function Projects() {
   return (
-    <div>
+    <div className="page">
       <section>
         <h1>Projects</h1>
       </section>

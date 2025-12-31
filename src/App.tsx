@@ -1,36 +1,46 @@
-import { HashRouter, Routes, Route, Link, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, NavLink, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Music from "./pages/Music";
 import Contact from "./pages/Contact";
+import "./App.css";
 
 export default function App() {
   return (
     <HashRouter>
-      <header
-        style={{
-          display: "flex",
-          gap: "1rem",
-          padding: "1rem",
-          borderBottom: "1px solid #444",
-        }}
-      >
-        <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/music">Music</Link>
-        <Link to="/contact">Contact</Link>
-      </header>
+      <div className="app-shell">
+        <header className="app-header">
+          <div className="nav">
+            <span className="nav-brand">JASON DING</span>
 
-      <main style={{ padding: "1.5rem", maxWidth: "900px", margin: "0 auto" }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/music" element={<Music />} />
-          <Route path="/contact" element={<Contact />} />
+            <nav className="nav-links">
+              <NavLink to="/" className={({ isActive }) => isActive ? "nav-link nav-link--active" : "nav-link"}>
+                Home
+              </NavLink>
+              <NavLink to="/projects" className={({ isActive }) => isActive ? "nav-link nav-link--active" : "nav-link"}>
+                Projects
+              </NavLink>
+              <NavLink to="/music" className={({ isActive }) => isActive ? "nav-link nav-link--active" : "nav-link"}>
+                Music
+              </NavLink>
+              <NavLink to="/contact" className={({ isActive }) => isActive ? "nav-link nav-link--active" : "nav-link"}>
+                Contact
+              </NavLink>
+            </nav>
+          </div>
+        </header>
 
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </main>
+        <main className="app-main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/music" element={<Music />} />
+            <Route path="/contact" element={<Contact />} />
+
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+      </div>
     </HashRouter>
   );
 }

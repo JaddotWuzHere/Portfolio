@@ -344,8 +344,9 @@ export default function Projects() {
           yet:
         </p>
         <ul>
-          <li>Advent of Code solutions and misc algorithm practice</li>
-          <li>Minecraft mods</li>
+          <li>OpenGL voxel engine</li>
+          <li>Advent of Code solutions and analysis</li>
+          <li>Minecraft mods/plugins</li>
         </ul>
         <p>
           Most of these live on my{" "}

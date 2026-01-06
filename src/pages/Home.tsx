@@ -21,7 +21,7 @@ export default function Home() {
         <h3>Currently Building</h3>
         <ul>
           <li>Locrian</li>
-          <li>Realistic water physics Minecraft mod</li>
+          <li>Gradient</li>
           <li>The Continuum</li>
         </ul>
       </section>

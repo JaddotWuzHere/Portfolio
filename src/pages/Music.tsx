@@ -26,11 +26,11 @@ export default function Music() {
             this to be one of my proudest moments in my music career.
           </p>
 
-          <a href="https://jaddotwuzhere.github.io/portfolio/tinkers.pdf" target="_blank" rel="noreferrer">
+          <a href="https://www.jsonding.com/tinkers.pdf" target="_blank" rel="noreferrer">
             Sheet Music
           </a>{" "}
           ·{" "}
-          <a href="https://jaddotwuzhere.github.io/portfolio/tinkers.mp3" target="_blank" rel="noreferrer">
+          <a href="https://www.jsonding.com/tinkers.mp3" target="_blank" rel="noreferrer">
             Audio
           </a>
         </article>
@@ -44,7 +44,7 @@ export default function Music() {
             rest can be up to your vivid imagination.
           </p>
 
-          <a href="https://jaddotwuzhere.github.io/portfolio/ghoul.pdf" target="_blank" rel="noreferrer">
+          <a href="https://www.jsonding.com/ghoul.pdf" target="_blank" rel="noreferrer">
             WIP Sheet Music
           </a>
         </article>

@@ -28,11 +28,11 @@ export default function Contact() {
         <p>
           <strong>LinkedIn:</strong>{" "}
           <a
-            href="https://www.linkedin.com/in/jason-ding-77a6a3391/"
+            href="https://www.linkedin.com/in/jsonding/"
             target="_blank"
             rel="noreferrer"
           >
-            linkedin.com/in/jason-ding-77a6a3391/
+            linkedin.com/in/jsonding
           </a>
         </p>
       </section>

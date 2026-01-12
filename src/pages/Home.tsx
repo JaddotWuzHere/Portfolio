@@ -5,7 +5,7 @@ export default function Home() {
         <div className="meta-pill">CS / AI • Music</div>
 
         <h1 className="hero-title gradient-text">Jason Ding</h1>
-        <h2 className="hero-subtitle">CS/AI &amp; Music @ Carnegie Mellon University</h2>
+        <h2 className="hero-subtitle">CS @ Carnegie Mellon University</h2>
 
         <p className="hero-blurb">
           I make programs sometimes.
@@ -29,9 +29,9 @@ export default function Home() {
       <section>
         <h3>Featured Work</h3>
 
-        <h4>Locrian — music practice app</h4>
+        <h4>Locrian</h4>
         <p>
-          A dark and elegant web app for tracking practice sessions, built to be
+          A dark and elegant web app for tracking music practice sessions, built to be
           simple enough that musicians actually use it.
         </p>
         <p>

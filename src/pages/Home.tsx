@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className="page">
       <section className="hero-section">
-        <div className="meta-pill">CS / AI • Music</div>
+        <div className="meta-pill">CS • Music</div>
 
         <h1 className="hero-title gradient-text">Jason Ding</h1>
         <h2 className="hero-subtitle">CS @ Carnegie Mellon University</h2>

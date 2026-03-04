@@ -2,6 +2,7 @@ import locrian from "../assets/locrian.png";
 import raytracer from "../assets/raytracer.png";
 import continuum from "../assets/continuum.png";
 import hydraxia from "../assets/hydraxia.png";
+import gradient from "../assets/gradient.gif";
 
 
 export default function Projects() {
@@ -14,72 +15,7 @@ export default function Projects() {
       <section>
         <h2>Featured</h2>
 
-        <article>
-          <h3>Locrian</h3>
-
-          <p>
-            I've always found it difficult to keep track of my practice sessions, what I need to work on,
-            and whether I've been improving when it comes to music performance. Thus, I've decided to create
-            Locrian, which is a music practice app made with serious musicians in mind to help organize 
-            their practice routine and to keep a productive schedule.
-          </p>
-          <p>
-            The name of the app is quite clever, if I do say so myself. The locrian scale has long been regarded as
-            the least stable of all modes, some even going as far as calling it "unplayable". This is due to its 
-            very dissonant sound, and most songs, classic or modern, rarely use such a scale. 
-          </p>
-          <p>So, if you ever lay your musicianship on Locrian, expect some flaws in your playing. But if you practice,
-            your music may be just as beautifully and elegantly dissonant as the locrian scale.
-          </p>
-
-            <img src={locrian} alt="locrian" style={{ width: "1280px", height: "auto" }} />
-
-          <p>
-            <strong>Problem:</strong> Tracking practice sessions manually is annoying and inconsistent. I want something
-            built for serious musicians, not a generic to-do app.
-          </p>
-          <p>
-            <strong>Solution:</strong> I built a web app to log practice sessions with timers, piece tracking, and insights on
-            which pieces were most worked on.
-          </p>
-
-          <p>
-            <strong>Features:</strong>
-
-            <ul>
-              <li>
-                Start/stop timer based practice sessions
-              </li>
-              <li>
-                  Piece manager
-              </li>
-              <li>
-                  Session history log
-              </li>
-              <li>
-                Insights page
-              </li>
-              <li>
-                Minimal workflow that requires only a few taps/clicks
-              </li>
-            </ul>
-          </p>
-
-          <p>
-            <strong>Stack:</strong> React, TypeScript, Vite, browser storage
-          </p>
-          <p>
-            <a href="https://github.com/JaddotWuzHere/Locrian" target="_blank" rel="noreferrer">
-              GitHub repo
-            </a>{" "}
-            ·{" "}
-            <a href="https://locrian.vercel.app/" target="_blank" rel="noreferrer">
-              Website
-            </a>
-          </p>
-        </article>
-
-        <article>
+<article>
           <h3>Ray Tracer</h3>
 
           <p>
@@ -166,35 +102,145 @@ export default function Projects() {
           </p>
         </article>
 
-        {/*<article>
-          <h3>Realistic Water Physics — Minecraft fluid simulation experiment</h3>
-          <p>
-            A custom fluid update rule for Minecraft that aims for intuitive,
-            stable water spreading rather than vanilla&apos;s strange edge cases.
-          </p>
-          <ul>
-            <li>
-              Designed local redistribution rules over neighboring blocks to
-              approximate even spread of discrete water levels.
-            </li>
-            <li>
-              Focused on rules that converge to visually stable configurations
-              while still feeling like &quot;Minecraft water&quot; rather than full CFD.
-            </li>
-            <li>
-              Considered performance constraints so updates can run each tick
-              without blowing up CPU usage.
-            </li>
-          </ul>
-          <p>
-            <strong>Stack:</strong> Java, Minecraft modding APIs (Forge/Fabric)
+        <article>
+          <h3>Gradient</h3>
+
+          <p>Minecraft's water physics has always been very jank. The fact that you could create infinite water and perpetual floating water sources always felt odd to me,
+            even though they do function well enough from a game design standpoint. However, I thought it would be interesting to create a mod that added a bit more realism
+            and consistent behavior without removing the core theme of the game.
           </p>
           <p>
-            <a href="#" target="_blank" rel="noreferrer">
-              GitHub repo / WIP
+            I focused on distributive behavior that conserved water, so no fluids can be created or destroyed. A problem quickly arose, and that was oceans, which contained hundreds
+            of thousands of water cells that would almost certainly crash the game if simulated all at once. Thus, I made a point to design performance features so calculations weren't
+            done simultaneously and instead relied on regions, which were toggled active and insactive depending on nearby simulation activity.
+          </p>
+          <p>
+            It was a little late when I realized something like this has already existed on the internet, but I still enjoyed implementing my own version of this idea. 
+          </p>
+
+          <img src={gradient} alt="gradient" style={{ width: "1280px", height: "auto" }} />
+
+          <p>
+            <strong>Problem:</strong> Minecraft water is implemented as a simple static spread system rather than a physically inspired fluid simulation. I wanted to explore how
+            a more consistent water model could be integrated into Minecraft while remaining performant enough for actual gameplay.
+          </p>
+          <p>
+            <strong>Solution:</strong> I build a Minecraft mod that replaces vanilla water behavior with a region based fluid simulation system.
+          </p>
+
+          <p>
+            <strong>Features:</strong>
+
+            <ul>
+              <li>
+                Convservation of water levels
+              </li>
+              <li>
+                  Multi level water
+              </li>
+              <li>
+                  Region based simulation where metadata is stored in discrete regions
+              </li>
+              <li>
+                Lazy assimilation to convert vanilla water into simulated water only when interacted with
+              </li>
+              <li>
+                Adjustable sim step and world sync intervals for TPS performance targets
+              </li>
+            </ul>
+          </p>
+
+          <p>
+            <strong>Challenges:</strong>
+
+            <ul>
+              <li>
+                Maintaining acceptable server TPS with larger bodies of water
+              </li>
+              <li>
+                Believable water distribution
+              </li>
+              <li>
+                Synchronizing simulation state between server and client
+              </li>
+            </ul>
+          </p>
+
+          <p>
+            <strong>Stack:</strong> Fabric API, Java
+          </p>
+
+          <p>
+            <a href="https://github.com/JaddotWuzHere/Gradient" target="_blank" rel="noreferrer">
+              GitHub repo
+            </a>{" "}
+          </p>
+        </article>
+
+        <article>
+          <h3>Locrian</h3>
+
+          <p>
+            I've always found it difficult to keep track of my practice sessions, what I need to work on,
+            and whether I've been improving when it comes to music performance. Thus, I've decided to create
+            Locrian, which is a music practice app made with serious musicians in mind to help organize 
+            their practice routine and to keep a productive schedule.
+          </p>
+          <p>
+            The name of the app is quite clever, if I do say so myself. The locrian scale has long been regarded as
+            the least stable of all modes, some even going as far as calling it "unplayable". This is due to its 
+            very dissonant sound, and most songs, classic or modern, rarely use such a scale. 
+          </p>
+          <p>So, if you ever lay your musicianship on Locrian, expect some flaws in your playing. But if you practice,
+            your music may be just as beautifully and elegantly dissonant as the locrian scale.
+          </p>
+
+            <img src={locrian} alt="locrian" style={{ width: "1280px", height: "auto" }} />
+
+          <p>
+            <strong>Problem:</strong> Tracking practice sessions manually is annoying and inconsistent. I want something
+            built for serious musicians, not a generic to-do app.
+          </p>
+          <p>
+            <strong>Solution:</strong> I built a web app to log practice sessions with timers, piece tracking, and insights on
+            which pieces were most worked on.
+          </p>
+
+          <p>
+            <strong>Features:</strong>
+
+            <ul>
+              <li>
+                Start/stop timer based practice sessions
+              </li>
+              <li>
+                  Piece manager
+              </li>
+              <li>
+                  Session history log
+              </li>
+              <li>
+                Insights page
+              </li>
+              <li>
+                Minimal workflow that requires only a few taps/clicks
+              </li>
+            </ul>
+          </p>
+
+          <p>
+            <strong>Stack:</strong> React, TypeScript, Vite, browser storage
+          </p>
+          <p>
+            <a href="https://github.com/JaddotWuzHere/Locrian" target="_blank" rel="noreferrer">
+              GitHub repo
+            </a>{" "}
+            ·{" "}
+            <a href="https://locrian.vercel.app/" target="_blank" rel="noreferrer">
+              Website
             </a>
           </p>
-        </article> */}
+        </article>
 
         <article>
           <h3>Hydraxia</h3>

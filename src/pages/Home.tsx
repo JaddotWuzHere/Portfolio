@@ -20,8 +20,7 @@ export default function Home() {
       <section>
         <h3>Currently Building</h3>
         <ul>
-          <li>Locrian</li>
-          <li>Gradient</li>
+          <li>Warden</li>
           <li>The Continuum</li>
         </ul>
       </section>
@@ -29,10 +28,9 @@ export default function Home() {
       <section>
         <h3>Featured Work</h3>
 
-        <h4>Locrian</h4>
+        <h4>Gradient</h4>
         <p>
-          A dark and elegant web app for tracking music practice sessions, built to be
-          simple enough that musicians actually use it.
+          A physically inspired consisted water physics model within Minecraft.
         </p>
         <p>
           <a href="#/projects">View more on Projects →</a>
@@ -49,7 +47,7 @@ export default function Home() {
       </section>
 
       <section>
-        <h3>Also into music</h3>
+        <h3>Music</h3>
         <p>I also make music sometimes.</p>
 
         <p>
@@ -63,7 +61,7 @@ export default function Home() {
 
       <section>
         <h3>Get in touch</h3>
-        <p>If you want to chat, feel free to reach out.</p>
+        <p>If you want to chat, feel free to reach out!</p>
         <p>
           <a href="#/contact">Contact →</a>
         </p>

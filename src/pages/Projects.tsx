@@ -376,7 +376,7 @@ export default function Projects() {
               Github repo
             </a>{" "}
             ·{" "}
-            <a href="https://thecontinuum.vercel.app/en/" target="_blank" rel="noreferrer">
+            <a href="https://continuumarchives.com/en/" target="_blank" rel="noreferrer">
               Website
             </a>
           </p>

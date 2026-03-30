@@ -20,7 +20,7 @@ export default function Home() {
       <section>
         <h3>Currently Building</h3>
         <ul>
-          <li>Warden</li>
+          <li>Scry</li>
           <li>The Continuum</li>
         </ul>
       </section>

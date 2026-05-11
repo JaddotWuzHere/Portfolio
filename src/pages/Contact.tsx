@@ -17,11 +17,11 @@ export default function Contact() {
         <p>
           <strong>GitHub:</strong>{" "}
           <a
-            href="https://github.com/jaddotwuzhere"
+            href="https://github.com/jaddotish"
             target="_blank"
             rel="noreferrer"
           >
-            github.com/jaddotwuzhere
+            github.com/jaddotish
           </a>
         </p>
 

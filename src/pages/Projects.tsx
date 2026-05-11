@@ -386,18 +386,17 @@ export default function Projects() {
       <section>
         <h2>Other things</h2>
         <p>
-          Smaller experiments and course projects that aren&apos;t fully written up
+          Smaller experiments and course projects that aren't fully written up
           yet:
         </p>
         <ul>
           <li>OpenGL voxel engine</li>
-          <li>Advent of Code solutions and analysis</li>
           <li>Minecraft mods/plugins</li>
         </ul>
         <p>
           Most of these live on my{" "}
           <a
-            href="https://github.com/jaddotwuzhere"
+            href="https://github.com/jaddotish"
             target="_blank"
             rel="noreferrer"
           >

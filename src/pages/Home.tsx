@@ -28,6 +28,14 @@ export default function Home() {
       <section>
         <h3>Featured Work</h3>
 
+        <h4>Scry</h4>
+        <p>
+          A Linux sandbox written in Rust with resource limits, process isolation, filesystem isolation, and execution tracking.
+        </p>
+        <p>
+          <a href="#/projects">View more on Projects →</a>
+        </p>
+
         <h4>Gradient</h4>
         <p>
           A physically inspired consisted water physics model within Minecraft.

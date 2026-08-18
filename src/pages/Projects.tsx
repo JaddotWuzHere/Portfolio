@@ -3,6 +3,7 @@ import raytracer from "../assets/raytracer.png";
 import continuum from "../assets/continuum.png";
 import hydraxia from "../assets/hydraxia.png";
 import gradient from "../assets/gradient.gif";
+import scry from "../assets/scry.png";
 
 
 export default function Projects() {
@@ -15,7 +16,99 @@ export default function Projects() {
       <section>
         <h2>Featured</h2>
 
-<article>
+        <article>
+          <h3>Scry</h3>
+
+          <p>
+            I've always found operating systems interesting because so much of what they do is invisible during normal
+            programming, and how so much of it could be exploited to do malicious things. I wanted to understand more
+            of the lower level intracacies of how processes and other things such as memory and files are managed at 
+            that boundary.
+          </p>
+
+          <p>
+            Scry is a small Linux sandbox I built in Rust for running programs inside a restricted environment. Rather
+            than just launching a child process and waiting for it to finish, Scry places limits on the resources it can 
+            consume, isolates parts of its view of the system, captures its output, enforces wall-clock timeouts, and
+            reports what happened during execution.
+          </p>
+
+          <img src={scry} alt="Scry sandbox output" style={{ width: "1280px", height: "auto" }} />
+
+          <p>
+            <strong>Problem:</strong> Running an arbitrary program normally gives it access to the host
+            environment and allows it to consume resources with relatively few restrictions. I wanted to explore
+            how Linux itself can be used to constrain and observe a process.
+          </p>
+
+          <p>
+            <strong>Solution:</strong> I built a Linux sandbox in Rust that launches programs with resource
+            limits and process/filesystem isolation, then collects information about their execution.
+          </p>
+
+          <p>
+            <strong>Features:</strong>
+          </p>
+
+          <ul>
+            <li>
+              CPU, memory, file size, process, and file descriptor limits
+            </li>
+            <li>
+              Wall-clock timeout with process-group cleanup
+            </li>
+            <li>
+              Bounded stdout and stderr capture
+            </li>
+            <li>
+              UTS, network, and mount namespace isolation
+            </li>
+            <li>
+              Isolated filesystem root using <code>pivot_root</code>
+            </li>
+            <li>
+              Filesystem activity tracking using <code>strace</code>
+            </li>
+            <li>
+              Human-readable and JSON execution reports
+            </li>
+          </ul>
+
+          <p>
+            <strong>Challenges:</strong>
+          </p>
+
+          <ul>
+            <li>
+              Correctly setting up Linux namespaces and filesystem isolation
+            </li>
+            <li>
+              Cleaning up entire process groups after timeouts
+            </li>
+            <li>
+              Handling errors across forked processes without leaving resources behind
+            </li>
+            <li>
+              Working safely with low-level Linux system interfaces from Rust
+            </li>
+          </ul>
+
+          <p>
+            <strong>Stack:</strong> Rust, Linux, namespaces, resource limits, strace
+          </p>
+
+          <p>
+            <a
+              href="https://github.com/Jaddotish/Scry"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub repo
+            </a>
+          </p>
+        </article>
+
+        <article>
           <h3>Ray Tracer</h3>
 
           <p>
@@ -92,7 +185,7 @@ export default function Projects() {
             windowing/graphics library
           </p>
           <p>
-            <a href="https://github.com/JaddotWuzHere/raytracer_21-241" target="_blank" rel="noreferrer">
+            <a href="https://github.com/Jaddotish/raytracer_21-241" target="_blank" rel="noreferrer">
               GitHub repo
             </a>{" "}
             ·{" "}
@@ -171,7 +264,7 @@ export default function Projects() {
           </p>
 
           <p>
-            <a href="https://github.com/JaddotWuzHere/Gradient" target="_blank" rel="noreferrer">
+            <a href="https://github.com/Jaddotish/Gradient" target="_blank" rel="noreferrer">
               GitHub repo
             </a>{" "}
           </p>
@@ -232,7 +325,7 @@ export default function Projects() {
             <strong>Stack:</strong> React, TypeScript, Vite, browser storage
           </p>
           <p>
-            <a href="https://github.com/JaddotWuzHere/Locrian" target="_blank" rel="noreferrer">
+            <a href="https://github.com/Jaddotish/Locrian" target="_blank" rel="noreferrer">
               GitHub repo
             </a>{" "}
             ·{" "}
@@ -293,7 +386,7 @@ export default function Projects() {
             noise functions, Paper/Bukkit servers, Minecraft
           </p>
           <p>
-            <a href="https://github.com/JaddotWuzHere/Hydraxia" target="_blank" rel="noreferrer">
+            <a href="https://github.com/Jaddotish/Hydraxia" target="_blank" rel="noreferrer">
               Github repo
             </a>{" "}
             ·{" "}
@@ -372,7 +465,7 @@ export default function Projects() {
             SCSS, Markdown
           </p>
           <p>
-            <a href="https://github.com/JaddotWuzHere/TheContinuum" target="_blank" rel="noreferrer">
+            <a href="https://github.com/Jaddotish/TheContinuum" target="_blank" rel="noreferrer">
               Github repo
             </a>{" "}
             ·{" "}

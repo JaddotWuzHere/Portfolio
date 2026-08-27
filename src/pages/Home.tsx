@@ -33,7 +33,7 @@ export default function Home() {
           A Linux sandbox written in Rust with resource limits, process isolation, filesystem isolation, and execution tracking.
         </p>
         <p>
-          <a href="#/projects">View more on Projects →</a>
+          <a href="#/projects#scry">View more on Projects →</a>
         </p>
 
         <h4>Gradient</h4>
@@ -41,7 +41,7 @@ export default function Home() {
           A physically inspired consisted water physics model within Minecraft.
         </p>
         <p>
-          <a href="#/projects">View more on Projects →</a>
+          <a href="#/projects#gradient">View more on Projects →</a>
         </p>
 
         <h4>Ray Tracer</h4>
@@ -50,7 +50,7 @@ export default function Home() {
           reflections &amp; Blinn-Phong shading.
         </p>
         <p>
-          <a href="#/projects">View more on Projects →</a>
+          <a href="#/projects#ray-tracer">View more on Projects →</a>
         </p>
       </section>
 

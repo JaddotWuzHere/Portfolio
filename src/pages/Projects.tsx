@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import locrian from "../assets/locrian.png";
 import raytracer from "../assets/raytracer.png";
 import continuum from "../assets/continuum.png";
@@ -7,6 +10,16 @@ import scry from "../assets/scry.png";
 
 
 export default function Projects() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      element?.scrollIntoView();
+    }
+  }, [location.hash]);
+  
   return (
     <div className="page">
       <section>
@@ -16,7 +29,7 @@ export default function Projects() {
       <section>
         <h2>Featured</h2>
 
-        <article>
+        <article id="scry">
           <h3>Scry</h3>
 
           <p>
@@ -108,7 +121,7 @@ export default function Projects() {
           </p>
         </article>
 
-        <article>
+        <article id="ray-tracer">
           <h3>Ray Tracer</h3>
 
           <p>
@@ -195,7 +208,7 @@ export default function Projects() {
           </p>
         </article>
 
-        <article>
+        <article id="gradient">
           <h3>Gradient</h3>
 
           <p>Minecraft's water physics has always been very jank. The fact that you could create infinite water and perpetual floating water sources always felt odd to me,
@@ -270,7 +283,7 @@ export default function Projects() {
           </p>
         </article>
 
-        <article>
+        <article id="locrian">
           <h3>Locrian</h3>
 
           <p>
@@ -335,7 +348,7 @@ export default function Projects() {
           </p>
         </article>
 
-        <article>
+        <article id="hydraxia">
           <h3>Hydraxia</h3>
 
           <p>
@@ -400,7 +413,7 @@ export default function Projects() {
           </p>
         </article>
 
-        <article>
+        <article id="continuum">
           <h3>The Continuum</h3>
 
           <p>
